@@ -1,16 +1,20 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import Home from './Home'
 import AboutUs from './AboutUs'
 
+const theme = createMuiTheme()
+
 const App = () => (
-  <Router>
-    <div>
-      <h1>Hello ChitChat Material Design!</h1>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={AboutUs} />
-    </div>
-  </Router>
+  <MuiThemeProvider theme={theme}>
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={AboutUs} />
+      </div>
+    </Router>
+  </MuiThemeProvider>
 )
 
 export default App
