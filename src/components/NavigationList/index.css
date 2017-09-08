@@ -1,0 +1,19 @@
+.header-navigation-list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.header-navigation-list li:hover {
+  color: #6495ed;
+}
+
+.header-navigation-list li {
+  float: left;
+  color: grey;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
