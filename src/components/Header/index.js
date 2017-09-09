@@ -20,7 +20,7 @@ const Header = ({ classes }) => (
         <div className={classes.flex}>
           <Logo />
         </div>
-        <NavLink to="/" className={classes.link}>
+        <NavLink to="/sign-up" className={classes.link}>
           <Button className={classes.button}>Sign Up</Button>
         </NavLink>
         <NavLink to="/" className={classes.link}>
