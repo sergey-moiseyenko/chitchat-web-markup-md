@@ -1,24 +1,37 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
-import Tabs, { Tab } from 'material-ui/Tabs'
+import Toolbar from 'material-ui/Toolbar'
+import Button from 'material-ui/Button'
+import IconButton from 'material-ui/IconButton'
+import MenuIcon from 'material-ui-icons/Menu'
+import { withStyles } from 'material-ui/styles'
 
-const Header = () => (
-  <AppBar position="static" color="default">
-    <Tabs
-      value={0}
-      onChange={() => {}}
-      indicatorColor="primary"
-      textColor="primary"
-      fullWidth
-    >
-      <Tab label="Item One" />
-      <Tab label="Item Two" />
-      <Tab label="Item Three" />
-      <Tab label="Item Four" />
-      <Tab label="Item Five" />
-      <Tab label="Item Six" />
-    </Tabs>
-  </AppBar>
+import styles from './styles.js'
+import Logo from '../Logo'
+
+const Header = ({ classes }) => (
+  <div className={classes.root}>
+    <AppBar position="static" className={classes.appBar}>
+      <Toolbar disableGutters>
+        <IconButton className={classes.menuButton} aria-label="Menu">
+          <MenuIcon />
+        </IconButton>
+        <div className={classes.flex}>
+          <Logo />
+        </div>
+        <NavLink to="/" className={classes.link}>
+          <Button className={classes.button}>Sign Up</Button>
+        </NavLink>
+        <NavLink to="/" className={classes.link}>
+          <Button className={classes.button}>Sign In</Button>
+        </NavLink>
+        <NavLink to="/about" className={classes.link}>
+          <Button className={classes.button}>About Us</Button>
+        </NavLink>
+      </Toolbar>
+    </AppBar>
+  </div>
 )
 
-export default Header
+export default withStyles(styles)(Header)
