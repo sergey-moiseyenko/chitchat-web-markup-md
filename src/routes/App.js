@@ -4,7 +4,7 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import { deepPurple } from 'material-ui/colors'
 import SignUpRoute from './SignUp'
 import Home from './Home'
-import AboutUs from './AboutUs'
+import AboutUsRoute from './AboutUs'
 
 const theme = createMuiTheme({
   mainColorPalette: deepPurple
@@ -15,7 +15,7 @@ const App = () => (
     <Router>
       <div>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={AboutUs} />
+        <Route exact path="/about" component={AboutUsRoute} />
         <Route path="/sign-up" component={SignUpRoute} />
       </div>
     </Router>

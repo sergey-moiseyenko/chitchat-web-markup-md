@@ -1,11 +1,17 @@
 import React from 'react'
+import { Grid } from 'material-ui'
+import AboutUs from '../components/AboutUs'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-const AboutUs = () => (
-  <div>
+const AboutUsRoute = () => (
+  <Grid container direction="column">
     <Header />
-    <p>About Us page</p>
-  </div>
+    <Grid item xs={12}>
+      <AboutUs />
+    </Grid>
+    <Footer />
+  </Grid>
 )
 
-export default AboutUs
+export default AboutUsRoute
