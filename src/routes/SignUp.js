@@ -1,6 +1,6 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
-import SignUp from '../components/SignUp'
+import SignUp from 'components/SignUp'
 
 const styles = theme => ({
   signUpPage: {

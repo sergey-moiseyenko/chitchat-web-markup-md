@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import { deepPurple } from 'material-ui/colors'
-import SignUpRoute from './SignUp'
-import Home from './Home'
-import AboutUsRoute from './AboutUs'
+import SignUpRoute from 'routes/SignUp'
+import Home from 'routes/Home'
+import AboutUsRoute from 'routes/AboutUs'
 
 const theme = createMuiTheme({
   mainColorPalette: deepPurple
