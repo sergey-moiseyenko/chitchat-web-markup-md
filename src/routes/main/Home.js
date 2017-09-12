@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from 'components/Header'
+import Grid from 'material-ui/Grid'
 
 const Home = () => (
-  <div>
-    <Header />
-    <p>Home page</p>
-  </div>
+  <Grid container>
+    <Grid item xs={12}>
+      <p>Home page</p>
+    </Grid>
+  </Grid>
 )
 
 export default Home

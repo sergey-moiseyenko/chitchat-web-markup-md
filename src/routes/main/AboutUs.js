@@ -1,16 +1,12 @@
 import React from 'react'
 import Grid from 'material-ui/Grid'
 import AboutUs from 'components/AboutUs'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
 
 const AboutUsRoute = () => (
-  <Grid container direction="column">
-    <Header />
+  <Grid container>
     <Grid item xs={12}>
       <AboutUs />
     </Grid>
-    <Footer />
   </Grid>
 )
 
