@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles } from 'material-ui'
+import { withStyles } from 'material-ui/styles'
 import styles from './styles'
 
 const Footer = ({ classes }) => (

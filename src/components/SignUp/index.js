@@ -1,7 +1,7 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import TextField from 'material-ui/TextField'
-import { Button } from 'material-ui'
+import Button from 'material-ui/Button'
 import Paper from 'material-ui/Paper'
 import styles from './styles'
 

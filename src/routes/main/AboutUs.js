@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from 'material-ui'
+import Grid from 'material-ui/Grid'
 import AboutUs from 'components/AboutUs'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
