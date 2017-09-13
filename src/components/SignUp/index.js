@@ -3,33 +3,55 @@ import { withStyles } from 'material-ui/styles'
 import TextField from 'material-ui/TextField'
 import Button from 'material-ui/Button'
 import Paper from 'material-ui/Paper'
+import Grid from 'material-ui/Grid'
 import styles from './styles'
 
 const SignUp = ({ classes }) => (
-  <Paper className={classes.container} elevation={4}>
-    <div className={classes.title}>
-      <h2>Sign Up</h2>
-    </div>
-    <form className={classes.form}>
-      <TextField
-        id="email"
-        className={classes.textFiled}
-        label="Email"
-        type="email"
-        margin="normal"
-      />
-      <TextField
-        id="password"
-        className={classes.textFiled}
-        label="Password"
-        type="password"
-        margin="normal"
-      />
-      <Button raised color="primary" className={classes.button}>
-        GET STARDED
-      </Button>
-    </form>
-  </Paper>
+  <Grid container className={classes.root}>
+    <Grid item xs={12}>
+      <form noValidate autoComplete="off">
+        <Paper elevation={4}>
+          <Grid container direction="column" spacing={0}>
+            <Grid item xs={12} className={classes.header}>
+              <h2>Sign Up</h2>
+            </Grid>
+
+            <Grid item xs={12} className={classes.textFields}>
+              <Grid container justify="center" spacing={0}>
+                <Grid item xs={9} className={classes.txt}>
+                  <TextField
+                    id="email"
+                    label="Email"
+                    type="email"
+                    margin="normal"
+                    fullWidth
+                    required
+                  />
+                </Grid>
+
+                <Grid item xs={9} className={classes.txt}>
+                  <TextField
+                    id="password"
+                    label="Password"
+                    type="password"
+                    margin="normal"
+                    fullWidth
+                    required
+                  />
+                </Grid>
+              </Grid>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Button className={classes.button}>
+                <h3>GET STARTED</h3>
+              </Button>
+            </Grid>
+          </Grid>
+        </Paper>
+      </form>
+    </Grid>
+  </Grid>
 )
 
 export default withStyles(styles)(SignUp)

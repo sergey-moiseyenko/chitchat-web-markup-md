@@ -1,19 +1,21 @@
 import React from 'react'
 import { withStyles } from 'material-ui/styles'
+import Grid from 'material-ui/Grid'
 import SignUp from 'components/SignUp'
 
 const styles = theme => ({
-  signUpPage: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: theme.spacing.unit * 8
+  root: {
+    paddingTop: theme.spacing.unit * 8
   }
 })
 
 const SignUpRoute = ({ classes }) => (
-  <div className={classes.signUpPage}>
-    <SignUp />
+  <div className={classes.root}>
+    <Grid container justify="center">
+      <Grid item md={3} sm={6} xs={10}>
+        <SignUp />
+      </Grid>
+    </Grid>
   </div>
 )
 

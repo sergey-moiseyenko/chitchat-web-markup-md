@@ -1,34 +1,26 @@
 export default ({ mainColorPalette, spacing }) => ({
-  container: {
-    display: 'inline-flex',
-    flexDirection: 'column'
+  root: {
+    minWidth: '200px'
   },
-  title: {
+  header: {
+    textAlign: 'center',
     color: mainColorPalette[50],
-    backgroundColor: mainColorPalette[500],
-    paddingLeft: spacing.unit * 4,
+    backgroundColor: mainColorPalette[500]
+  },
+  textFields: {
+    paddingTop: spacing.unit * 2,
+    paddingBottom: spacing.unit * 6
+  },
+  txt: {
     paddingTop: spacing.unit,
     paddingBottom: spacing.unit
   },
-  form: {
-    display: 'inline-flex ',
-    flexDirection: 'column',
-    paddingLeft: spacing.unit * 4,
-    paddingRight: spacing.unit * 4,
-    marginBottom: spacing.unit * 6
-  },
-  textFiled: {
-    width: '300px',
-    minWidth: '100px'
-  },
   button: {
+    width: '100%',
     color: mainColorPalette[50],
-    backgroundColor: mainColorPalette[300],
-    paddingTop: spacing.unit * 2.5,
-    paddingBottom: spacing.unit * 2.5,
-    marginTop: spacing.unit * 7,
-    '&:hower': {
-      backgroundColor: mainColorPalette[500]
+    backgroundColor: mainColorPalette[500],
+    '&:hover': {
+      backgroundColor: mainColorPalette[700]
     }
   }
 })
